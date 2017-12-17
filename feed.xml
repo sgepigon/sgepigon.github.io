@@ -12,17 +12,17 @@ https://sgepigon.github.io/
 A grab bag of numbers and words
 </description>
 <lastBuildDate>
-Thu, 26 Oct 2017 13:23:00 -0400
+Fri, 15 Dec 2017 12:56:45 -0500
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
 <item>
 <guid>
-https://sgepigon.github.io/escape-hatches/
+https://sgepigon.github.io/blog/escape-hatches/
 </guid>
 <link>
-https://sgepigon.github.io/escape-hatches/
+https://sgepigon.github.io/blog/escape-hatches/
 </link>
 <title>
 Escape Hatches
@@ -36,10 +36,10 @@ Sun, 05 Feb 2017 00:00:00 -0500
 </item>
 <item>
 <guid>
-https://sgepigon.github.io/hello-world/
+https://sgepigon.github.io/blog/hello-world/
 </guid>
 <link>
-https://sgepigon.github.io/hello-world/
+https://sgepigon.github.io/blog/hello-world/
 </link>
 <title>
 Hello World!
