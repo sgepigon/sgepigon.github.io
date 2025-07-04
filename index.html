@@ -68,6 +68,20 @@
             border-bottom: 1px dotted;
         }
 
+        li.talk {
+            margin-bottom: 0.5em;
+        }
+
+        .talk-title {
+        }
+
+        .talk-subtitle {
+            font-size: 0.9em;
+            color: rgb(88,88,88);
+            margin-top: 0.2em;
+        }
+
+
         footer {
             margin-top: 4em;
             font-size: 0.9em;
@@ -83,20 +97,36 @@
 
     <main>
         <h2>talks (yapping):</h2>
+
         <ul>
-            <li><a href="https://screenshot.arquipelago.org/" rel="noopener">crop, a screenshot primitive</a></li>
-            <li><a href="https://bangbangcon.com/speakers.html#santiago-gepigon" rel="noopener">it's skeuomorphin' time!! the enduring physicality of braille!</a> (<a href="https://www.youtube.com/watch?v=Y3qv4p_1Erk" rel="noopener">video</a>)</li>
-            <li><a href="https://www.reclojure.org/old_site/2020-speakers/santiago-gepigon.html" rel="noopener">this whittle piggy or: how i learned to relax and refine my specs</a> (<a href="https://www.youtube.com/watch?v=T693rk4YaVI" rel="noopener">video</a>)</li>
-            <li><a href="https://2019.clojure-conj.org/speaker-santiago-gepigon-iii/" rel="noopener">piggy: specs for breaking changes</a> (<a href="https://www.youtube.com/watch?v=uTrQqm2hQ84" rel="noopener">video</a>)</li>
+            <li class="talk">
+                <div class="talk-title"><a href="https://screenshot.arquipelago.org/">crop, a screenshot primitive</a></div>
+                <div class="talk-subtitle">Screenshot Conf!, May 2025</div>
+            </li>
+
+            <li class="talk">
+                <div class="talk-title"><a href="https://bangbangcon.com/speakers.html#santiago-gepigon">it's skeuomorphin' time!! the enduring physicality of braille!</a></div>
+                <div class="talk-subtitle">!!Con, Aug 2024 · (<a href="https://www.youtube.com/watch?v=Y3qv4p_1Erk">video</a>)</div>
+            </li>
+
+            <li class="talk">
+                <div class="talk-title"><a href="https://www.reclojure.org/old_site/2020-speakers/santiago-gepigon.html">this whittle piggy or: how i learned to relax and refine my specs</a></div>
+                <div class="talk-subtitle">reClojure, Dec 2020 · (<a href="https://www.youtube.com/watch?v=T693rk4YaVI">video</a>)</div>
+            </li>
+
+            <li class="talk">
+                <div class="talk-title"><a href="https://2019.clojure-conj.org/speaker-santiago-gepigon-iii/">piggy: specs for breaking changes</a></div>
+                <div class="talk-subtitle">Clojure/Conj, Nov 2019 · (<a href="https://www.youtube.com/watch?v=uTrQqm2hQ84">video</a>)</div>
+            </li>
         </ul>
     </main>
 
     <footer>
-        <p>
-            <a href="https://github.com/sgepigon/" rel="noopener"><img src="icons/github.ico" width="16" height="16" style="vertical-align: text-bottom;" alt=""> github</a> ·
-            <a href="https://bsky.app/profile/santigepigon.com" rel="noopener"><img src="icons/bluesky.png" width="16" height="16" style="vertical-align: text-bottom;" alt=""> bluesky</a> ·
-            <a href="https://twitter.com/santigepigon" rel="noopener"><img src="icons/twitter.ico" width="16" height="16" style="vertical-align: text-bottom;" alt=""> twitter</a>
-        </p>
+        <nav>
+            <a href="https://github.com/sgepigon/"><img src="icons/github.ico" alt="GitHub"> github</a> ·
+            <a href="https://bsky.app/profile/santigepigon.com"><img src="icons/bluesky.png" alt="Bluesky"> bluesky</a> ·
+            <a href="https://twitter.com/santigepigon"><img src="icons/twitter.ico" alt="Twitter"> twitter</a>
+        </nav>
     </footer>
 </body>
 </html>
