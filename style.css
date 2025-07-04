@@ -6,6 +6,7 @@ body {
     padding: 0 20px;
     line-height: 1.2;
     color: rgb(66,66,66);
+    background-color: #FDFBF7; /* warm off-white */
 }
 
 h1 {
