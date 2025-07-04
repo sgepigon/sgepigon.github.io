@@ -101,16 +101,37 @@
             margin-top: 4em;
             font-size: 0.9em;
         }
+
+        /* Skip to main content link - hidden until focused */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 0.5em 1em;
+            background: rgb(66,66,66);
+            color: white;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <header>
         <h1>santi gepigon iii</h1>
         <p class="definition">mundane noun (unsettling verb)</p>
     </header>
 
-    <main>
+    <main id="main">
         <h2>talks (yapping):</h2>
 
         <ul>
@@ -138,9 +159,9 @@
 
     <footer>
         <nav>
-            <a href="https://github.com/sgepigon/"><img src="icons/github.ico" alt="GitHub"> github</a> ·
-            <a href="https://bsky.app/profile/santigepigon.com"><img src="icons/bluesky.png" alt="Bluesky"> bluesky</a> ·
-            <a href="https://twitter.com/santigepigon"><img src="icons/twitter.ico" alt="Twitter"> twitter</a>
+            <a href="https://github.com/sgepigon/" rel="noopener"><img src="icons/github.ico" width="16" height="16" style="vertical-align: text-bottom;" alt="GitHub"> github</a> ·
+            <a href="https://bsky.app/profile/santigepigon.com" rel="noopener"><img src="icons/bluesky.png" width="16" height="16" style="vertical-align: text-bottom;" alt="Bluesky"> bluesky</a> ·
+            <a href="https://twitter.com/santigepigon" rel="noopener"><img src="icons/twitter.ico" width="16" height="16" style="vertical-align: text-bottom;" alt="Twitter"> twitter</a>
         </nav>
     </footer>
 </body>
