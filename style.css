@@ -29,10 +29,17 @@ h2 {
 }
 
 a {
+    color: #006B54; /* phthalo green */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4A8B7C; /* muted teal-gray */
     text-decoration: none;
 }
 
 a:hover {
+    color: #004D3D; /* deeper phthalo */
     border-bottom: 1px dotted;
 }
 
