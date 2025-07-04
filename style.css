@@ -1,0 +1,82 @@
+body {
+    font-family: serif;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 30px auto 0px auto;
+    padding: 0 20px;
+    line-height: 1.2;
+    color: rgb(66,66,66);
+}
+
+h1 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: rgb(44,44,44);
+}
+
+h2 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: rgb(44,44,44);
+}
+
+.definition {
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0 0 2em 0;
+    font-size: 0.95em;
+    color: rgb(68,68,68);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px dotted;
+}
+
+a:focus {
+    outline: 2px solid rgb(66,66,66);
+    outline-offset: 2px;
+}
+
+/* Only show focus outline for keyboard navigation in modern browsers */
+a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 2px solid rgb(66,66,66);
+    outline-offset: 2px;
+}
+
+footer {
+    margin-top: 4em;
+    font-size: 0.9em;
+}
+
+footer nav img {
+    vertical-align: text-bottom;
+    width: 16px;
+    height: 16px;
+}
+
+/* Skip to main content link - hidden until focused */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 0.5em 1em;
+    background: rgb(66,66,66);
+    color: white;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
