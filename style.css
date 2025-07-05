@@ -1,6 +1,6 @@
 /* Color palette & animation values */
 :root {
-    /* Colors */
+    /* Base colors */
     --color-text: rgb(66,66,66);
     --color-text-light: rgb(68,68,68);
     --color-heading: rgb(44,44,44);
@@ -10,9 +10,18 @@
     --color-bg: #FDFBF7;           /* warm off-white */
     --color-white: white;
 
+    /* Effect colors */
+    --color-highlight: #FF94AB;    /* pink - difference blend of white on primary green */
+    --color-highlight-rgb: 255, 148, 171; /* RGB values for rgba() */
+
     /* Animation values */
     --max-scale: 1.05;
     --min-opacity: 0.8;
+
+    /* Hover box properties */
+    --hover-box-offset: -0.2em;
+    --hover-box-transition: opacity 0.3s ease;
+    --mundane-hover-opacity: 0.6;
 }
 
 /* Base styles */
@@ -25,6 +34,17 @@ body {
     line-height: 1.2;
     color: var(--color-text);
     background-color: var(--color-bg);
+}
+
+/* Text selection */
+::selection {
+    background: rgba(var(--color-highlight-rgb), 0.4);
+    color: var(--color-text);
+}
+
+::-moz-selection {
+    background: rgba(var(--color-highlight-rgb), 0.4);
+    color: var(--color-text);
 }
 
 /* Typography */
@@ -122,6 +142,43 @@ footer nav img {
     border: 0;
 }
 
+/* Shared text effect base */
+.unsettling,
+.mundane {
+    display: inline-block;
+}
+
+.mundane {
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.mundane::before {
+    content: '';
+    position: absolute;
+    top: var(--hover-box-offset);
+    left: var(--hover-box-offset);
+    right: var(--hover-box-offset);
+    bottom: var(--hover-box-offset);
+    border: 2px dotted var(--color-highlight);
+    opacity: 0;
+    transition: var(--hover-box-transition);
+    pointer-events: none;
+}
+
+.mundane:hover::before {
+    opacity: var(--mundane-hover-opacity);
+}
+
+.unsettling {
+    animation: languish 5s ease-in-out infinite;
+    transition: none;
+}
+
+.unsettling:hover {
+    animation: evade 2.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+}
+
 /* Animation keyframes */
 @keyframes languish {
     0%, 100% {
@@ -163,15 +220,4 @@ footer nav img {
         transform: perspective(100px) rotateY(-5deg) rotateX(3deg);
         opacity: 0.88;
     }
-}
-
-/* Unsettling text effect */
-.unsettling {
-    display: inline-block;
-    animation: languish 5s ease-in-out infinite;
-    transition: none;
-}
-
-.unsettling:hover {
-    animation: evade 2.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
