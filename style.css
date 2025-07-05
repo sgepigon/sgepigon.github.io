@@ -1,3 +1,21 @@
+/* Color palette & animation values */
+:root {
+    /* Colors */
+    --color-text: rgb(66,66,66);
+    --color-text-light: rgb(68,68,68);
+    --color-heading: rgb(44,44,44);
+    --color-primary: #006B54;      /* phthalo green */
+    --color-primary-dark: #004D3D; /* deeper phthalo */
+    --color-primary-muted: #4A8B7C; /* muted teal-gray */
+    --color-bg: #FDFBF7;           /* warm off-white */
+    --color-white: white;
+
+    /* Animation values */
+    --max-scale: 1.05;
+    --min-opacity: 0.8;
+}
+
+/* Base styles */
 body {
     font-family: serif;
     font-size: 16px;
@@ -5,20 +23,21 @@ body {
     margin: 30px auto 0px auto;
     padding: 0 20px;
     line-height: 1.2;
-    color: rgb(66,66,66);
-    background-color: #FDFBF7; /* warm off-white */
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
+/* Typography */
 h1 {
     font-size: 1.3em;
     margin-bottom: 0.5em;
-    color: rgb(44,44,44);
+    color: var(--color-heading);
 }
 
 h2 {
     font-size: 1.1em;
     margin-bottom: 0.5em;
-    color: rgb(44,44,44);
+    color: var(--color-heading);
 }
 
 .definition {
@@ -26,26 +45,27 @@ h2 {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 0 0 2em 0;
     font-size: 0.95em;
-    color: rgb(68,68,68);
+    color: var(--color-text-light);
 }
 
+/* Links */
 a {
-    color: #006B54; /* phthalo green */
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 a:visited {
-    color: #4A8B7C; /* muted teal-gray */
+    color: var(--color-primary-muted);
     text-decoration: none;
 }
 
 a:hover {
-    color: #004D3D; /* deeper phthalo */
+    color: var(--color-primary-dark);
     border-bottom: 1px dotted;
 }
 
 a:focus {
-    outline: 2px solid rgb(66,66,66);
+    outline: 2px solid var(--color-text);
     outline-offset: 2px;
 }
 
@@ -55,7 +75,7 @@ a:focus:not(:focus-visible) {
 }
 
 a:focus-visible {
-    outline: 2px solid rgb(66,66,66);
+    outline: 2px solid var(--color-text);
     outline-offset: 2px;
 }
 
@@ -76,8 +96,8 @@ footer nav img {
     left: -9999px;
     z-index: 999;
     padding: 0.5em 1em;
-    background: rgb(66,66,66);
-    color: white;
+    background: var(--color-text);
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -85,7 +105,7 @@ footer nav img {
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
-    outline: 2px solid white;
+    outline: 2px solid var(--color-white);
     outline-offset: 2px;
 }
 
@@ -102,11 +122,7 @@ footer nav img {
     border: 0;
 }
 
-:root {
-    --max-scale: 1.05;
-    --min-opacity: 0.8;
-}
-
+/* Animation keyframes */
 @keyframes languish {
     0%, 100% {
         transform: scale(1);
@@ -149,6 +165,7 @@ footer nav img {
     }
 }
 
+/* Unsettling text effect */
 .unsettling {
     display: inline-block;
     animation: languish 5s ease-in-out infinite;
