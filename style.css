@@ -102,16 +102,59 @@ footer nav img {
     border: 0;
 }
 
+:root {
+    --max-scale: 1.05;
+    --min-opacity: 0.8;
+}
+
+@keyframes languish {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(var(--max-scale));
+        opacity: var(--min-opacity);
+    }
+}
+
+@keyframes evade {
+    0%, 100% {
+        transform: perspective(100px) rotateY(7deg) rotateX(-1deg);
+        opacity: 1;
+    }
+    8% {
+        transform: perspective(100px) rotateY(-11deg) rotateX(2deg);
+        opacity: 0.96;
+    }
+    23% {
+        transform: perspective(100px) rotateY(-6deg) rotateX(5deg);
+        opacity: 0.91;
+    }
+    31% {
+        transform: perspective(100px) rotateY(-14deg) rotateX(1deg);
+        opacity: var(--min-opacity);
+    }
+    52% {
+        transform: perspective(100px) rotateY(-9deg) rotateX(4deg);
+        opacity: 0.85;
+    }
+    67% {
+        transform: perspective(100px) rotateY(-12deg) rotateX(-2deg);
+        opacity: 0.93;
+    }
+    84% {
+        transform: perspective(100px) rotateY(-5deg) rotateX(3deg);
+        opacity: 0.88;
+    }
+}
+
 .unsettling {
-    text-decoration: none;
-    transition: all 0.2s ease;
+    display: inline-block;
+    animation: languish 5s ease-in-out infinite;
+    transition: none;
 }
 
 .unsettling:hover {
-    text-decoration: underline overline;
-    text-decoration-color: #006B54;
-    text-decoration-thickness: 2px;
-    text-decoration-style: wavy;
-    text-underline-offset: 5px;
-    text-decoration-skip-ink: auto;
+    animation: evade 2.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
