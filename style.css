@@ -16,7 +16,6 @@
 
     /* Animation values */
     --max-scale: 1.05;
-    --min-opacity: 0.8;
 
     /* Hover box properties */
     --hover-box-offset: -0.2em;
@@ -187,7 +186,7 @@ footer nav img {
     }
     50% {
         transform: scale(var(--max-scale));
-        opacity: var(--min-opacity);
+        opacity: 0.9;
     }
 }
 
@@ -206,7 +205,7 @@ footer nav img {
     }
     31% {
         transform: perspective(100px) rotateY(-14deg) rotateX(1deg);
-        opacity: var(--min-opacity);
+        opacity: 0.8;
     }
     52% {
         transform: perspective(100px) rotateY(-9deg) rotateX(4deg);
